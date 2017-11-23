@@ -145,6 +145,9 @@ li>a{
     height: 450px;
     border: 1px solid #f4f7fc;
 }
+#topcontent>div:hover, #middlecontent>div:hover, #bottomcontent>div:hover{
+     border: 1px solid black;
+}
 .content{
     display: inline-block;
 
