@@ -1,0 +1,159 @@
+/*STYLE RULL FOR WHOLE SITE*/
+/*ensure all of content are inside the viewport*/
+* {
+    box-sizing: border-box;
+}
+/*Create a grid system to align the content*/
+.col-1 {width: 25%;}
+.col-2 {width: 50%;}
+.col-3 {width: 75%;}
+.col-4 {width: 100%;}
+
+ul{
+    list-style: none;
+
+}
+li{
+    display:inline-block;
+}
+li>a{
+
+    text-decoration: none;
+    color: black;
+}
+/*STYLE RULL FOR TOP SECTION*/
+
+#brandname{
+    margin: 15px 30px;
+    display: inline-block;
+    float: left;
+    font-size: 36px;
+}
+
+#signin>button{
+    display: inline-block;
+    float:right;
+    padding: 10px 15px;
+    margin: 20px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+/*STYLE RULL FOR NAVIGATIONBAR*/
+#topbar{
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+
+}
+#menuelist{
+
+    margin-left: 15%
+}
+#topbar li{
+    width: auto;
+    height: inherit;
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+    margin-left: 35px;
+}
+
+/*STYLE RULL FOR toggle NAVIGATIONBAR*/
+#toggleContent{
+
+    display: flex;
+    position: absolute;
+    width: 60%;
+    margin-left: 20%;
+    flex-wrap: wrap;
+    background-color: azure;
+    z-index: 1;
+
+}
+
+#toggleContent>div{
+
+    margin: auto;
+
+
+}
+#toggleContent ul li{
+    display:inline-block;
+    margin: 10px;
+
+
+}
+
+#toggleContent ul li ul{
+    clear: both;
+
+    padding: 10px 15px;
+
+
+
+}
+#toggleContent ul li ul li{
+
+    display:block;
+
+
+    margin: 6px 0;
+    text-align: left;
+
+
+}
+/*STYLE RULL FOR ngview*/
+.container{
+    width: 100%;
+    display: flex;
+    padding: 30px;
+}
+.sidebar{
+    width: 20%;
+    border-right: 1px solid #f4f7fc;
+    display: inline-block;
+}
+.sidebar ul{
+    display: block;
+     margin-bottom: 30px;
+   
+}
+
+.sidebar ul li{
+    display: block;
+   
+}
+.sidebar ul li ul{
+    padding: 8px;
+   
+}
+#homecontent{
+    width: 100%;
+}
+#topcontent,#middlecontent,#bottomcontent{
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+}
+#topcontent>div, #middlecontent>div, #bottomcontent>div{
+    display: inline-block;
+    flex:1;
+    margin: 5px;
+    background-color: aqua;
+    height: 30px;
+    border: 1px solid #f4f7fc;
+}
+.content{
+    display: inline-block;
+   
+}
+.content>div{
+    display: inline-block;
+    width: 300px;
+    height: 500px;
+    margin: 5px;
+    background-color: black;
+}
+
