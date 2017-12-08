@@ -36,9 +36,14 @@
     <body ng-app="myApp" ng-controller="myCtrl">
         <div id="signin" >
 
-            <div id="brandname">One Stop</div>
+            <div id="brandname" >One Stop</div>
+            <div id="searchbox" ng-mouseleave="leave()">
+                <input type="search" id="mySearch" placeholder="Searching here ..." ng-mousedown="md()" ng-keydown="kd()" ng-keyup="kp()" ng-model="myval">
+                <div id="searchreminder" ng-show="result">{{myval}}</div>
+            </div>
 
-            <button ng-click="showContent()">Signin</button>
+
+            <button >Signin</button>
             <button>Signup</button>
 
 
@@ -48,12 +53,12 @@
 
             <ul id="menueli">
                 <li><a href="/" ng-mouseover="wflag=false; mflag=false;kflag=false;hflag=false;sflag=false;bflag=false" >OnlineSystem</a></li>
-                <li ng-mouseover="wflag=true; mflag=false;kflag=false;hflag=false;sflag=false;bflag=false" ng-click="wflag=false"><a href="/women" >Women</a></li>
-                <li ng-mouseover="mflag=true;wflag=false;kflag=false;hflag=false;sflag=false;bflag=false" ng-click="mflag=false"><a href="/men">Men</a></li>
-                <li ng-mouseover="kflag=true; wflag=false; mflag=false;hflag=false;sflag=false;bflag=false" ng-click="kflag=false"><a href="/kids">Kids</a></li>
-                <li ng-mouseover="bflag=true;wflag=false; mflag=false;kflag=false;hflag=false;sflag=false" ng-click="bflag=false"><a href="/beauty">Beauty</a></li>
-                <li ng-mouseover="hflag=true; wflag=false; mflag=false;kflag=false;sflag=false;bflag=false" ng-click="hflag=false"><a href="/home">Home</a></li>
-                <li ng-mouseover="sflag=true; wflag=false; mflag=false;kflag=false;hflag=false;bflag=false" ng-click="sflag=false"><a href="/sale">Sale</a></li>
+                <li ng-mouseover="wflag=true" ng-mouseleave="wflag=false" ng-click="wflag=false"><a href="/women" >Women</a></li>
+                <li ng-mouseover="mflag=true" ng-mouseleave="mflag=false" ng-click="mflag=false"><a href="/men">Men</a></li>
+                <li ng-mouseover="kflag=true" ng-mouseleave="kflag=false" ng-click="kflag=false"><a href="/kids">Kids</a></li>
+                <li ng-mouseover="bflag=true" ng-mouseleave="bflag=false" ng-click="bflag=false"><a href="/beauty">Beauty</a></li>
+                <li ng-mouseover="hflag=true" ng-mouseleave="hflag=false" ng-click="hflag=false"><a href="/home">Home</a></li>
+                <li ng-mouseover="sflag=true" ng-mouseleave="sflag=false" ng-click="sflag=false"><a href="/sale">Sale</a></li>
 
             </ul>
 
@@ -96,7 +101,7 @@
                 </ul>
             </div>
             <div id="mensection" ng-show="mflag">
-                 <ul>
+                <ul>
                     <li>Clothing
                         <ul>
                             <li>Activewear</li>
@@ -129,194 +134,84 @@
 
                     </li>
                 </ul>
-            
+
             </div>
             <div id="kidssection"  ng-show="kflag">
                 <ul>
-        <li>Clothing
-            <ul>
-                <li>Activewear</li>
-                <li>Coats</li>
-                <li>Dress</li>
-                <li>Jeans</li>
-                <li>Skirts</li>
-                <li>Suits</li>
-            </ul>
-        </li>
-        <li>Shoes
-            <ul>
-                <li>Booties</li>
-                <li>Boots</li>
-                <li>Comfort</li>
-                <li>Heels</li>
-                <li>Pumps</li>
-                <li>Slippers</li>
-            </ul>
-        </li>
-        <li>Handbags
-              <ul>
-                <li>Backpacks</li>
-                <li>Clutches & Pouches</li>
-                <li>Designer Handbags</li>
-                <li>Hobo Bags</li>
-                <li>Totes</li>
-                <li>Wallets & Card Cases</li>
-            </ul>
-        
-        </li>
-    </ul>
+                    <li>Clothing
+                        <ul>
+                            <li>Activewear</li>
+                            <li>Coats</li>
+                            <li>Dress</li>
+                            <li>Jeans</li>
+                            <li>Skirts</li>
+                            <li>Suits</li>
+                        </ul>
+                    </li>
+                    <li>Shoes
+                        <ul>
+                            <li>Booties</li>
+                            <li>Boots</li>
+                            <li>Comfort</li>
+                            <li>Heels</li>
+                            <li>Pumps</li>
+                            <li>Slippers</li>
+                        </ul>
+                    </li>
+                    <li>Handbags
+                        <ul>
+                            <li>Backpacks</li>
+                            <li>Clutches & Pouches</li>
+                            <li>Designer Handbags</li>
+                            <li>Hobo Bags</li>
+                            <li>Totes</li>
+                            <li>Wallets & Card Cases</li>
+                        </ul>
+
+                    </li>
+                </ul>
             </div>
             <div id="beautysection"  ng-show="bflag">
                 <ul>
-        <li>Makeup
-            <ul>
-                <li>Blush</li>
-                <li>Concealer</li>
-                <li>Eyebrows</li>
-                <li>Eyeliner</li>
-                <li>Foundation</li>
-                <li>Lipstick & Liner</li>
-            </ul>
-        </li>
-        <li>Skin Care
-            <ul>
-                <li>Cleansers</li>
-                <li>Exfoliators & Peels</li>
-                <li>Eye Cream & Treatments</li>
-                <li>Face Masks</li>
-                <li>Face Moisturizers</li>
-                <li>Sun Care & Sunscreens</li>
-            </ul>
-        </li>
-        <li>Fragrance
-              <ul>
-                <li>Candles & Diffusers</li>
-                <li>Perfume</li>
-            </ul>
-        
-        </li>
-          <li>Hair Care
-            <ul>
-                <li>Hair & Scalp Treatments</li>
-                <li>Hair Styling & Styling Tools</li>
-                <li>Shampoos</li>
-                <li>Conditioner</li>
-            </ul>
-        </li>
-    </ul>
-            
+                    <li>Makeup
+                        <ul>
+                            <li>Blush</li>
+                            <li>Concealer</li>
+                            <li>Eyebrows</li>
+                            <li>Eyeliner</li>
+                            <li>Foundation</li>
+                            <li>Lipstick & Liner</li>
+                        </ul>
+                    </li>
+                    <li>Skin Care
+                        <ul>
+                            <li>Cleansers</li>
+                            <li>Exfoliators & Peels</li>
+                            <li>Eye Cream & Treatments</li>
+                            <li>Face Masks</li>
+                            <li>Face Moisturizers</li>
+                            <li>Sun Care & Sunscreens</li>
+                        </ul>
+                    </li>
+                    <li>Fragrance
+                        <ul>
+                            <li>Candles & Diffusers</li>
+                            <li>Perfume</li>
+                        </ul>
+
+                    </li>
+                    <li>Hair Care
+                        <ul>
+                            <li>Hair & Scalp Treatments</li>
+                            <li>Hair Styling & Styling Tools</li>
+                            <li>Shampoos</li>
+                            <li>Conditioner</li>
+                        </ul>
+                    </li>
+                </ul>
+
             </div>
             <div id="homesection"  ng-show="hflag">
-              <ul>
-        <li>Bedding
-            <ul>
-                <li>Bedding Basics</li>
-                <li>Bedding Collections</li>
-                <li>Comforters & Quilts</li>
-                <li>Decorative Pillows</li>
-                <li>Duvet Covers</li>
-                <li>Sheet & Bed Skirts</li>
-                <li>Throws & Blankets</li>
-            </ul>
-        </li>
-        <li>Living Room
-            <ul>
-                <li>Lucury Home Decor</li>
-                <li>Accent Furniture</li>
-                <li>Art Decor</li>
-                <li>Curtains</li>
-                <li>Lightinf & Lamps</li>
-                <li>Rugs</li>
-                <li>Sectional Sofa</li>
-            </ul>
-        </li>
-        <li>Bath
-              <ul>
-                <li>Bath Acessories</li>
-                <li>Rugs & Mats</li>
-                <li>Towels</li>
-                <li>Shower Curtains</li>
-                <li>Totes</li>
-                <li>Wallets & Card Cases</li>
-            </ul>
-        
-        </li>
-    </ul>
-            </div>
-            <div id="salesection"  ng-show="sflag">
-                       <ul>
-            <li>Women
-                <ul>
-                    <li>Clothing
-                        <ul>
-                            <li>Activewear</li>
-                            <li>Coats</li>
-                            <li>Dress</li>
-                            <li>Jeans</li>
-                            <li>Skirts</li>
-                            <li>Suits</li>
-                        </ul>
-                    </li>
-                    <li>Shoes
-                        <ul>
-                            <li>Booties</li>
-                            <li>Boots</li>
-                            <li>Comfort</li>
-                            <li>Heels</li>
-                            <li>Pumps</li>
-                            <li>Slippers</li>
-                        </ul>
-                    </li>
-                    <li>Handbags
-                        <ul>
-                            <li>Backpacks</li>
-                            <li>Clutches & Pouches</li>
-                            <li>Designer Handbags</li>
-                            <li>Hobo Bags</li>
-                            <li>Totes</li>
-                            <li>Wallets & Card Cases</li>
-                        </ul>
-
-                    </li>
-                </ul>
-            </li>
-            <li>Kids
-
-                <ul>
-                    <li>Clothing
-                        <ul>
-                            <li>Activewear</li>
-                            <li>Coats</li>
-                            <li>Dress</li>
-                            <li>Jeans</li>
-                            <li>Skirts</li>
-                            <li>Suits</li>
-                        </ul>
-                    </li>
-                    <li>Shoes
-                        <ul>
-                            <li>Booties</li>
-                            <li>Boots</li>
-                            <li>Comfort</li>
-                            <li>Heels</li>
-                            <li>Pumps</li>
-                            <li>Slippers</li>
-                        </ul>
-                    </li>
-                    <li>Handbags
-                        <ul>
-                            <li>Backpacks</li>
-                            <li>Clutches & Pouches</li>
-                            <li>Designer Handbags</li>
-                            <li>Hobo Bags</li>
-                            <li>Totes</li>
-                            <li>Wallets & Card Cases</li>
-                        </ul>
-
-                    </li>
-                </ul>
-            </li>
-            <li>Home
                 <ul>
                     <li>Bedding
                         <ul>
@@ -352,8 +247,118 @@
 
                     </li>
                 </ul>
-            </li>
-        </ul>
+            </div>
+            <div id="salesection"  ng-show="sflag">
+                <ul>
+                    <li>Women
+                        <ul>
+                            <li>Clothing
+                                <ul>
+                                    <li>Activewear</li>
+                                    <li>Coats</li>
+                                    <li>Dress</li>
+                                    <li>Jeans</li>
+                                    <li>Skirts</li>
+                                    <li>Suits</li>
+                                </ul>
+                            </li>
+                            <li>Shoes
+                                <ul>
+                                    <li>Booties</li>
+                                    <li>Boots</li>
+                                    <li>Comfort</li>
+                                    <li>Heels</li>
+                                    <li>Pumps</li>
+                                    <li>Slippers</li>
+                                </ul>
+                            </li>
+                            <li>Handbags
+                                <ul>
+                                    <li>Backpacks</li>
+                                    <li>Clutches & Pouches</li>
+                                    <li>Designer Handbags</li>
+                                    <li>Hobo Bags</li>
+                                    <li>Totes</li>
+                                    <li>Wallets & Card Cases</li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Kids
+
+                        <ul>
+                            <li>Clothing
+                                <ul>
+                                    <li>Activewear</li>
+                                    <li>Coats</li>
+                                    <li>Dress</li>
+                                    <li>Jeans</li>
+                                    <li>Skirts</li>
+                                    <li>Suits</li>
+                                </ul>
+                            </li>
+                            <li>Shoes
+                                <ul>
+                                    <li>Booties</li>
+                                    <li>Boots</li>
+                                    <li>Comfort</li>
+                                    <li>Heels</li>
+                                    <li>Pumps</li>
+                                    <li>Slippers</li>
+                                </ul>
+                            </li>
+                            <li>Handbags
+                                <ul>
+                                    <li>Backpacks</li>
+                                    <li>Clutches & Pouches</li>
+                                    <li>Designer Handbags</li>
+                                    <li>Hobo Bags</li>
+                                    <li>Totes</li>
+                                    <li>Wallets & Card Cases</li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Home
+                        <ul>
+                            <li>Bedding
+                                <ul>
+                                    <li>Bedding Basics</li>
+                                    <li>Bedding Collections</li>
+                                    <li>Comforters & Quilts</li>
+                                    <li>Decorative Pillows</li>
+                                    <li>Duvet Covers</li>
+                                    <li>Sheet & Bed Skirts</li>
+                                    <li>Throws & Blankets</li>
+                                </ul>
+                            </li>
+                            <li>Living Room
+                                <ul>
+                                    <li>Lucury Home Decor</li>
+                                    <li>Accent Furniture</li>
+                                    <li>Art Decor</li>
+                                    <li>Curtains</li>
+                                    <li>Lightinf & Lamps</li>
+                                    <li>Rugs</li>
+                                    <li>Sectional Sofa</li>
+                                </ul>
+                            </li>
+                            <li>Bath
+                                <ul>
+                                    <li>Bath Acessories</li>
+                                    <li>Rugs & Mats</li>
+                                    <li>Towels</li>
+                                    <li>Shower Curtains</li>
+                                    <li>Totes</li>
+                                    <li>Wallets & Card Cases</li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
 

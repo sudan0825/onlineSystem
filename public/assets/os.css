@@ -29,6 +29,28 @@ li>a{
     float: left;
     font-size: 36px;
 }
+#searchbox{
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    margin-left: 50%;
+    margin-top: 30px;
+}
+#mySearch{
+    -webkit-appearance: none;
+    
+    width: 300px;
+    padding: 5px;
+    font-size: 15px;
+
+}
+#searchreminder{
+    z-index: 1;
+    padding: 15px;
+    width: 300px;
+    height: 200px;
+    background-color: white;
+}
 
 #signin>button{
     display: inline-block;
